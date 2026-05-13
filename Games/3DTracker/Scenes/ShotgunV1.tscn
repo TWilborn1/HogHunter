@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/BlenderObjects/ShotgunV1.glb" type="PackedScene" id=1]
+
+[sub_resource type="QuadMesh" id=1]
+size = Vector2( 0.3, 0.3 )
+
+[sub_resource type="SpatialMaterial" id=2]
+flags_transparent = true
+albedo_color = Color( 0.956863, 0.698039, 0.0313726, 1 )
+emission_enabled = true
+emission = Color( 0, 0, 0, 1 )
+emission_energy = 5.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_unshaded = true
+albedo_color = Color( 0.980392, 0.756863, 0.0509804, 1 )
+
+[sub_resource type="QuadMesh" id=4]
+material = SubResource( 3 )
+
+[node name="ShotgunV1" instance=ExtResource( 1 )]
+transform = Transform( -1.31134e-08, 0, -0.3, 0, 0.3, 0, 0.3, 0, -1.31134e-08, -0.121103, -1.19209e-07, -0.405615 )
+
+[node name="Muzzle" type="Position3D" parent="." index="1"]
+transform = Transform( 0.425185, 0, -5.32907e-15, 0, 0.355685, 0, 1.77636e-15, 0, 0.586291, 4.25871, 0.876656, -0.358439 )
+
+[node name="MuzzleFlash" type="MeshInstance" parent="." index="2"]
+transform = Transform( -1.14315e-07, 0, 3.55352, 0, 2.30837, 0, -2.61522, 0, -1.55329e-07, 4.36919, 0.845417, -0.404771 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CPUParticles" type="CPUParticles" parent="MuzzleFlash" index="0"]
+transform = Transform( 1, 0, -1.01644e-20, 0, 1, 0, 0, 0, 1, 0, 0, 0.0123333 )
+emitting = false
+amount = 50
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.9
+mesh = SubResource( 4 )
+direction = Vector3( 0, 0, -1 )
+spread = 60.0
+initial_velocity = 10.0
+color = Color( 0.960784, 0.870588, 0.141176, 1 )

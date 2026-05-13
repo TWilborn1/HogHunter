@@ -1,0 +1,8 @@
+{
+	"contains_albedo": true,
+	"resolution": 512,
+	"src": {
+		"a": "res://textures_raw/Rocks006_4K-JPG/Rocks006_4K-JPG_Displacement.jpg",
+		"rgb": "res://textures_raw/Rocks006_4K-JPG/Rocks006_4K-JPG_Color.jpg"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"contains_albedo": false,
+	"resolution": 512,
+	"src": {
+		"a": "res://textures_raw/Rocks007_4K-JPG/Rocks007_4K-JPG_Roughness.jpg",
+		"normalmap_flip_y": true,
+		"rgb": "res://textures_raw/Rocks007_4K-JPG/Rocks007_4K-JPG_NormalGL.jpg"
+	}
+}
